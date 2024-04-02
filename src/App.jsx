@@ -18,6 +18,7 @@ function App() {
           <Link to="/RaceList">Races</Link>
         </nav>
         <Routes> {/*Step 6*/}
+          <Route path="/" element={<Character />} />
           <Route path ="/Character" element={<Character />} /> 
           <Route path ="/ClassList" element={<ClassList />} /> 
           <Route path ="/RaceList" element={<RaceList />} /> 

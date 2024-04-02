@@ -1,10 +1,8 @@
 import React, { useContext, useState } from "react";
 import { CharacterContext } from "./CharacterContext"
-import axios from "axios";
+
 
 export default function Class(props){
-    // handleSubmit
-    // console.log('in class comp props:', props)
     const { CharacterClass, setCharacterClass, classClicked } = useContext(CharacterContext)
 
     // console.log(props.proficiencies)
@@ -27,14 +25,18 @@ export default function Class(props){
 
     return(
         <div className="classes">
+            <div className="class-temp">
             <h1>
-                class: {props.class}
+                <strong>Class:</strong> {props.class}
             </h1>
-            <p className="hit-dice">Hit Dice: D{props.hitDie}</p>
-            <ul className="saving-throws">Saving Throws: {saving_throws}</ul>
-            <ul className="Proficiencies">Proficiencies: {proficiencies}</ul>
+            <p className="hit-dice"><strong>Hit Dice:</strong> D{props.hitDie}</p>
+            <h2><strong>Saving Throws:</strong></h2>
+            <ul className="saving-throws"> {saving_throws}</ul>
+            <h2><strong>Proficiencies:</strong></h2>
+            <ul className="Proficiencies"> {proficiencies}</ul>
 
             <button className="classBtn" onClick={() => classClicked(props)}>Choose this Class</button>
+            </div>
         </div>
     )
 }

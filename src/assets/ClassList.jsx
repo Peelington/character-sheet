@@ -42,7 +42,7 @@ export default function ClassList(){
 
     return (
         <>
-            <h1>classes</h1>
+            <h1 className="class-title">classes</h1>
             {classListElement}
         </>
     )
